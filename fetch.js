@@ -11,6 +11,8 @@ try {
     process.chdir(prefix);
   }
 
+  restoreKeys.unshift(keyString);
+
   const branch = process.env.GITHUB_REF_NAME;
   keyString = keyString+'-'+branch;
 
