@@ -21,6 +21,10 @@ inputs:
     description: 'path prefix to openwrt build directory'
     required: false
     defalut: ''
+  branch:
+    description: 'set a connected branch to booster'
+    required: false
+    defalut: ''
 outputs:
   hit:
     description: 'indicate cache found'
