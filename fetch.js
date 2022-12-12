@@ -15,9 +15,9 @@ try {
 
   const givenBranch = core.getInput('branch');
   if (givenBranch != '') {
-    const branch = givenBranch;
+    var branch = givenBranch;
   } else {
-    const branch = process.env.GITHUB_REF_NAME;
+    var branch = process.env.GITHUB_REF_NAME;
   };
   keyString = keyString+'-'+branch;
 
