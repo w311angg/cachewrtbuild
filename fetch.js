@@ -13,7 +13,12 @@ try {
 
   restoreKeys.unshift(keyString);
 
-  const branch = process.env.GITHUB_REF_NAME;
+  const givenBranch = core.getInput('branch');
+  if (givenBranch != '') {
+    const branch = givenBranch;
+  } else {
+    const branch = process.env.GITHUB_REF_NAME;
+  };
   keyString = keyString+'-'+branch;
 
   const toolchain = core.getInput('toolchain');
