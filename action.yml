@@ -25,6 +25,10 @@ inputs:
     description: 'set a connected branch to booster'
     required: false
     defalut: ''
+  skipSave:
+    description: 'skip save to cache'
+    required: false
+    defalut: 'false'
 outputs:
   hit:
     description: 'indicate cache found'
