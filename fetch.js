@@ -3,6 +3,11 @@ const github = require('@actions/github');
 const execSync = require('child_process').execSync;
 
 try {
+  const skipFetch = core.getInput('skipFetch');
+  if (skipFetch === 'true') {
+    process.exit();
+  };
+
   var paths = new Array();
   var keyString = 'cache-openwrt';
   var restoreKeys = new Array();
